@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sushi Prompt - Unsolved</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Write code here!
+      var flag = 0;
+      // ask user question
+      var userAnswer = confirm("Do you like sushi?");
+
+      // if userAnwer is true, prompt user for answer
+      if (userAnswer) {
+        var userInput1 = prompt("What kind of sushi do you like?");
+      }
+      // else
+      else {
+        var userInput2 = prompt("What is your favorite food?");
+        flag = 1;
+      }
+
+      alert(userAnswer);
+      if (flag === 0) {
+        alert(userInput1);
+      } else {
+        alert(userInput2);
+      }
+    </script>
+  </body>
+</html>
