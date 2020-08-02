@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional test</title>
+  </head>
+  <body>
+    <!-- code goes here -->
+  </body>
+  <script type="text/javascript">
+    //   get current date to check against user birth year
+    var date = Date.now();
+    var today = new Date(date);
+    var todayYear = today.getFullYear();
+
+    // ask user
+    var userAnswer = confirm("Do you like steak?");
+    var userBirthYear = prompt("What year were you born? (yyyy)");
+
+    // do math to get age of user
+    var age = todayYear - Number(userBirthYear);
+    if (age < 21) {
+      var young = "No sake for you!";
+    } else {
+      var old = "Sake Sake Sake!";
+    }
+
+    // if user likes steak
+    if (userAnswer) {
+      // if user is under 21
+      if (age < 21) {
+        document.write("Here's steak sandwich!" + young);
+      } else {
+        document.write("Here's steak sandwich!" + old);
+      }
+    }
+    // user does not like steak
+    else {
+      // if use is under 21
+      if (age < 21) {
+        document.write("Here's a tofu stir-fry!" + young);
+      } else {
+        document.write("Here's a tofu stir-fry!" + old);
+      }
+    }
+  </script>
+</html>
