@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Bands</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <script>
+      // my fav bands
+      var bands = ["U2", "Coldplay", "Kiss"];
+
+      // ask user their fav band
+      var userBand = prompt("What is your favorite band?");
+
+      // user .toLowercase() to compare answers
+      var userBandLower = userBand.toLowerCase();
+      //   new array of lowercase band names
+      var bandsLower = [];
+      for (let index = 0; index < bands.length; index++) {
+        bandsLower.push(bands[index].toLowerCase());
+      }
+      //   console.log(bandsLower);
+
+      // grab index of user input if in array
+      // if return #, there is a match & it's located at this index
+      // if return -1, no match & not in array
+      var userBandIndex = bandsLower.indexOf(userBandLower);
+
+      // check to see if user input is in our list of bands
+      //   if -1, no match
+      if (userBandIndex === -1) {
+        alert(`Nah, ${userBand} is lame!`);
+      } else {
+        alert(`Yeah! I love ${bands[userBandIndex]} too!`);
+      }
+    </script>
+  </body>
+</html>
